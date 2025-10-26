@@ -44,6 +44,7 @@ export default function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="/help" element={<Help />} />
           <Route path="/profile" element={<Profile />} />
+         
 
         </Routes>
       </main>
