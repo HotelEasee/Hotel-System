@@ -102,7 +102,7 @@ const HotelDetailsPage: React.FC = () => {
           <div className="booking-card">
             <div className="price-section">
               <div className="price">
-                <span className="amount">${hotel.pricePerNight}</span>
+                <span className="amount">ZAR {hotel.pricePerNight.toLocaleString()}</span>
                 <span className="unit">/night</span>
               </div>
               <div className="price-note">Prices may vary by date</div>
@@ -134,7 +134,7 @@ const HotelDetailsPage: React.FC = () => {
                 </select>
               </div>
               <Link to={`/payment/${hotel.id}`} className="book-btn">
-                Book Now
+                Reserve
               </Link>
             </div>
           </div>

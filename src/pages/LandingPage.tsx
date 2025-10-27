@@ -42,6 +42,19 @@ const LandingPage: React.FC = () => {
           <img src="/OB-SV549_0504ho_D_20120504033332.jpg" alt="Hotel neon sign" className="supporting-image" />
         </div>
       </section>
+
+      {/* Call to Action Section */}
+      <section className="cta-section">
+        <div className="cta-content">
+          <h2 className="cta-title">Ready to Find Your Perfect Stay?</h2>
+          <p className="cta-description">
+            Start exploring hotels and book your next adventure with ease.
+          </p>
+          <Link to="/hotels" className="cta-button">
+            Browse Hotels
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

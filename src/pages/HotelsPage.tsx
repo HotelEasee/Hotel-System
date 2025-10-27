@@ -352,63 +352,57 @@ const HotelsPage: React.FC = () => {
         <div className="hotels-grid">
           {filteredHotels.length > 0 ? (
             filteredHotels.map((hotel) => (
-              <div key={hotel.id} className="hotel-card">
-                <div className="hotel-image">
-                  <img src={hotel.image} alt={hotel.name} />
-                  <div className="hotel-badge">
-                    {hotel.availableRooms} rooms available
+              <Link to={`/hotels/${hotel.id}`} key={hotel.id} className="hotel-card-link">
+                <div className="hotel-card">
+                  <div className="hotel-image">
+                    <img src={hotel.image} alt={hotel.name} />
+                    <div className="hotel-badge">
+                      {hotel.availableRooms} rooms available
+                    </div>
+                  </div>
+                  <div className="hotel-info">
+                    <h3>{hotel.name}</h3>
+                    <p className="hotel-location">
+                      <FaMapMarkerAlt />
+                      {hotel.location}
+                    </p>
+                    <p className="hotel-description">{hotel.description}</p>
+                    
+                    <div className="hotel-amenities">
+                      {hotel.amenities.slice(0, 3).map((amenity, index) => (
+                        <span key={index} className="amenity-tag">
+                          {amenity}
+                        </span>
+                      ))}
+                      {hotel.amenities.length > 3 && (
+                        <span className="amenity-tag more">
+                          +{hotel.amenities.length - 3} more
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="hotel-rating">
+                      <FaStar />
+                      <span className="rating">{hotel.rating}</span>
+                      <span className="rating-text">Excellent</span>
+                    </div>
+
+                    <div className="hotel-price">
+                      <span className="price">ZAR {hotel.price.toLocaleString()}</span>
+                      <span className="price-period">/night</span>
+                      {calculateNights() > 0 && (
+                        <div className="total-price">
+                          Total: ZAR {(hotel.price * calculateNights() * searchFilters.rooms).toLocaleString()}
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="book-btn">
+                      View Details
+                    </div>
                   </div>
                 </div>
-                <div className="hotel-info">
-                  <h3>{hotel.name}</h3>
-                  <p className="hotel-location">
-                    <FaMapMarkerAlt />
-                    {hotel.location}
-                  </p>
-                  <p className="hotel-description">{hotel.description}</p>
-                  
-                  <div className="hotel-amenities">
-                    {hotel.amenities.slice(0, 3).map((amenity, index) => (
-                      <span key={index} className="amenity-tag">
-                        {amenity}
-                      </span>
-                    ))}
-                    {hotel.amenities.length > 3 && (
-                      <span className="amenity-tag more">
-                        +{hotel.amenities.length - 3} more
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="hotel-rating">
-                    <FaStar />
-                    <span className="rating">{hotel.rating}</span>
-                    <span className="rating-text">Excellent</span>
-                  </div>
-
-                  <div className="hotel-price">
-                    <span className="price">${hotel.price}</span>
-                    <span className="price-period">/night</span>
-                    {calculateNights() > 0 && (
-                      <div className="total-price">
-                        Total: ${(hotel.price * calculateNights() * searchFilters.rooms).toLocaleString()}
-                      </div>
-                    )}
-                  </div>
-
-                  <Link 
-                    to={`/payment/${hotel.id}`} 
-                    className="book-btn"
-                    state={{ 
-                      searchFilters,
-                      nights: calculateNights(),
-                      totalPrice: hotel.price * calculateNights() * searchFilters.rooms
-                    }}
-                  >
-                    Book Now
-                  </Link>
-                </div>
-              </div>
+              </Link>
             ))
           ) : (
             <div className="no-results">
