@@ -1,0 +1,93 @@
+/* ProfilePage.css */
+
+.profile-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  color: #222;
+}
+
+.profile-container h1 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile-field {
+  margin-bottom: 1.2rem;
+}
+
+.profile-field strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.profile-field p {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #111;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.25s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button + button {
+  margin-left: 1rem;
+  background-color: #6c757d;
+}
+
+button + button:hover {
+  background-color: #565e64;
+}
+
+.edit-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.edit-mode label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #444;
+}
+
+.edit-mode input {
+  margin-top: 0.3rem;
+}

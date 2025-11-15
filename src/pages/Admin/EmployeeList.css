@@ -1,0 +1,70 @@
+.employee-list-wrapper {
+padding: 1.5rem;
+background-color: #f9fafb;
+font-family: Arial, sans-serif;
+min-height: 100vh;
+}
+
+.employee-list-title {
+font-size: 1.25rem;
+font-weight: 600;
+margin-bottom: 1rem;
+color: #334155;
+}
+
+.table-container {
+background: #ffffff;
+padding: 1rem;
+border-radius: 8px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+overflow-x: auto;
+}
+
+.employee-table {
+width: 100%;
+border-collapse: collapse;
+table-layout: auto;
+}
+
+.table-header-row {
+border-bottom: 2px solid #e2e8f0;
+}
+
+.table-row {
+border-bottom: 1px solid #e2e8f0;
+transition: background-color 0.3s;
+}
+
+.table-row:hover {
+background-color: #f1f5f9;
+}
+
+.table-cell {
+padding: 12px 16px;
+color: #334155;
+font-size: 0.875rem;
+}
+
+.text-left {
+text-align: left;
+}
+
+.text-right {
+text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+.employee-list-wrapper {
+padding: 1rem;
+}
+
+.table-cell {
+padding: 8px 10px;
+font-size: 0.8125rem;
+}
+
+.employee-list-title {
+font-size: 1.125rem;
+}
+}

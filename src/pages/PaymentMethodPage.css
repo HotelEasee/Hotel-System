@@ -1,0 +1,59 @@
+.payment-checkout-container {
+  max-width: 660px;
+  margin: 3rem auto;
+  display: flex;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  padding: 32px;
+  gap: 40px;
+}
+.booking-summary {
+  min-width: 220px;
+  border-right: 1px solid #f2f2f2;
+  padding-right: 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.booking-summary h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.stripe-checkout-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+}
+.stripe-checkout-form button.pay-btn {
+  background: #0a7cff;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 28px;
+  padding: 13px 0;
+  font-size: 1.18rem;
+  margin-top: 14px;
+  transition: background 0.22s;
+  cursor: pointer;
+}
+.stripe-checkout-form button:disabled {
+  background: #d2e5fc;
+  cursor: not-allowed;
+}
+.payment-error {
+  color: #dd1f17;
+  background: #ffeaea;
+  padding: 8px 13px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.powered-by-stripe {
+  margin: 12px 0 0;
+  color: #667;
+  text-align: center;
+  font-size: 0.92rem;
+}
